@@ -14,7 +14,7 @@ class StartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        titleLabel.text = C.appName
        
     }
 }

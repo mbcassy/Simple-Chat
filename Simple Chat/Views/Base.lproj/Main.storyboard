@@ -252,7 +252,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="714"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" id="b8j-4G-cRU">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReusableCell" id="b8j-4G-cRU">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b8j-4G-cRU" id="8HG-Pq-jkt">
@@ -310,7 +310,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LFu-A0-5Bi"/>
                     </view>
-                    <navigationItem key="navigationItem" id="78z-1j-7Rl"/>
+                    <navigationItem key="navigationItem" id="78z-1j-7Rl">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="fZk-7T-YoL">
+                            <connections>
+                                <action selector="logoutPressed:" destination="evu-b8-OMH" id="CKx-oZ-SYW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="messageTextfield" destination="pDq-B3-nZm" id="rTI-WU-IWC"/>
                         <outlet property="tableView" destination="CYh-Jq-MRP" id="rQM-Qt-jTr"/>
