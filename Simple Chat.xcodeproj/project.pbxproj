@@ -20,6 +20,8 @@
 		E5416C1B24490B2C003DEC30 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5416C1A24490B2C003DEC30 /* LoginViewController.swift */; };
 		E5416C1D24490B47003DEC30 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5416C1C24490B47003DEC30 /* ChatViewController.swift */; };
 		E5477D5D244BAA9100437E32 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5477D5C244BAA9100437E32 /* GoogleService-Info.plist */; };
+		E54D744C244E551D00B0CB0F /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54D744A244E551D00B0CB0F /* MessageCell.swift */; };
+		E54D744D244E551D00B0CB0F /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54D744B244E551D00B0CB0F /* MessageCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		E5416C1A24490B2C003DEC30 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E5416C1C24490B47003DEC30 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		E5477D5C244BAA9100437E32 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E54D744A244E551D00B0CB0F /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		E54D744B244E551D00B0CB0F /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				E5416C0824490A4F003DEC30 /* Main.storyboard */,
+				E54D744A244E551D00B0CB0F /* MessageCell.swift */,
+				E54D744B244E551D00B0CB0F /* MessageCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -193,6 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E54D744D244E551D00B0CB0F /* MessageCell.xib in Resources */,
 				E5416C0F24490A51003DEC30 /* LaunchScreen.storyboard in Resources */,
 				E5477D5D244BAA9100437E32 /* GoogleService-Info.plist in Resources */,
 				E5416C0C24490A51003DEC30 /* Assets.xcassets in Resources */,
@@ -257,6 +264,7 @@
 				E538E26A244BB7FE008DE459 /* Message.swift in Sources */,
 				E5416C0324490A4F003DEC30 /* AppDelegate.swift in Sources */,
 				E5416C0524490A4F003DEC30 /* SceneDelegate.swift in Sources */,
+				E54D744C244E551D00B0CB0F /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
