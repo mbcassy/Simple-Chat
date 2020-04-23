@@ -21,7 +21,8 @@ class ChatViewController: UIViewController {
         tableView.dataSource = self
         title = C.appName
         navigationItem.hidesBackButton = true
-        tableView.register(UINib(nibName: C.cellNibName, bundle: nil), forCellReuseIdentifier: C.cellIdentifier)
+        tableView.register(UINib(nibName: C.YourCellNibName, bundle: nil), forCellReuseIdentifier: C.cellIdentifier)
+        tableView.register(UINib(nibName: C.TheirCellNibName, bundle: nil), forCellReuseIdentifier: C.TheirCellIdentifier)
         loadChat()
     }
     
@@ -33,6 +34,10 @@ class ChatViewController: UIViewController {
             ]) { (error) in
                 if let e = error {
                     print(e.localizedDescription)
+                } else {
+                    DispatchQueue.main.async {
+                        self.messageTextfield.text = ""
+                    }
                 }
             }
         }
@@ -63,6 +68,8 @@ class ChatViewController: UIViewController {
                             
                             DispatchQueue.main.async {
                                 self.tableView.reloadData()
+                                let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+                                self.tableView.scrollToRow(at: indexPath, at: .top, animated: false)
                             }
                         }
                     }
@@ -72,14 +79,23 @@ class ChatViewController: UIViewController {
     }
 }
 
+//MARK: - UITableViewDataSource
 extension ChatViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: C.cellIdentifier, for: indexPath) as! MessageCell
-        cell.messageLabel.text = messages[indexPath.row].body
-        return cell
+        let message = messages[indexPath.row]
+        
+        if message.sender == Auth.auth().currentUser?.email {
+            let cell = tableView.dequeueReusableCell(withIdentifier: C.cellIdentifier, for: indexPath) as! YourMessageCell
+            cell.messageLabel.text = message.body
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: C.cellIdentifier, for: indexPath)  as! TheirMessageCell
+            cell.messageLabel.text = message.body
+            return cell
+        }
     }
 }

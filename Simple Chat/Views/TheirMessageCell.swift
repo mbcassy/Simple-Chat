@@ -1,15 +1,16 @@
 //
-//  MessageCell.swift
+//  TheirMessageCell.swift
 //  Simple Chat
 //
-//  Created by Cassy on 4/20/20.
+//  Created by Cassy on 4/23/20.
 //  Copyright © 2020 Cassy. All rights reserved.
 //
 
 import UIKit
 
-class YourMessageCell: UITableViewCell {
+class TheirMessageCell: UITableViewCell {
 
+    
     @IBOutlet weak var messageBubble: UIView!
     @IBOutlet weak var messageLabel: UILabel!
     

@@ -12,15 +12,10 @@ struct C {
     static let registerSegue = "RegisterToMessages"
     static let loginSegue = "LoginToMessages"
     static let cellIdentifier = "ReusableCell"
-    static let cellNibName = "MessageCell"
+    static let TheirCellIdentifier = "TheirReusableCell"
+    static let YourCellNibName = "YourMessageCell"
+    static let TheirCellNibName = "TheirMessageCell"
     static let appName = "Simple Chat"
-    
-    struct BrandColors {
-        static let purple = "BrandPurple"
-        static let lightPurple = "BrandLightPurple"
-        static let blue = "BrandBlue"
-        static let lighBlue = "BrandLightBlue"
-    }
     
     struct FStore {
         static let collectionName = "messages"
